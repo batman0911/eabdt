@@ -50,13 +50,14 @@ if __name__ == '__main__':
     raise "missing dataset"
 
   dataset = sys.argv[1]
+  subset = sys.argv[2]
+  total_batch = int(sys.argv[3])
   
   print(f'start processing {dataset}')
   
-  raw_path = f'../data/raw/{dataset}'
-  clean_path = f'../data/vectorize/{dataset}'
-  
-  total_batch = 372
+  raw_path = f'../data/raw/{dataset}/{subset}'
+  clean_path = f'../data/vectorize/{dataset}/{subset}'
+
   num_process = 2
   num_batch_per_process = total_batch // num_process
   
