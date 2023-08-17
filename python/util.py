@@ -8,7 +8,7 @@ def load_label(folder, from_batch, to_batch):
   for i in range(from_batch, to_batch, 1):
     y = pd.read_csv(os.path.join(folder, f'y_{i}.csv'))
     ys.append(y)
-  return pd.concat(ys, axis=0)
+  return pd.concat(ys, axis=0).to_numpy()
 
 
 def load_vector(folder, from_batch, to_batch):

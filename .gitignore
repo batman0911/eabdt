@@ -6,3 +6,7 @@ data
 spark/.bsp
 spark/.idea
 **/target/**
+
+model/**
+
+python/__pycache__
