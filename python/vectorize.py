@@ -8,7 +8,8 @@ from multiprocessing import Process
 from sentence_transformers import SentenceTransformer
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-modelname = 'all-MiniLM-L6-v2'
+# modelname = 'all-MiniLM-L6-v2'
+modelname = 'all-mpnet-base-v2'
 
 
 def load_batch(raw_path, batch_idx):
