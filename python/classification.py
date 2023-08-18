@@ -11,7 +11,7 @@ data_folder = {
                 }
 # embeded_methods = ['sbert', 'tfidf']
 # classify_methods = ['logistic_regression', 'svm', 'xgboost', 'neural_network']
-embeded_methods = ['sbert']
+embeded_methods = ['tfidf', 'sbert']
 classify_methods = ['logistic_regression', 'svm', 'xgboost']
 
 
