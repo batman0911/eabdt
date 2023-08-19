@@ -8,5 +8,9 @@ spark/.idea
 **/target/**
 
 model/**
+Models/**
+Figures/**
+
+result.xlsx
 
 python/__pycache__
