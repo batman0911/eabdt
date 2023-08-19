@@ -1,5 +1,9 @@
 # Sentiment Analysis
 
+## Data
+
+- Dataset: https://1drv.ms/f/s!AhvVyQ1gW2O9gbVOpe6CyYYp0CYvag?e=IcxK4M
+
 ## Batch processing
 
 - Batch processing `python/vectorize.ipynb`
