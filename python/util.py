@@ -6,7 +6,7 @@ from torcheval.metrics import BinaryAUROC
 import matplotlib.pyplot as plt
 import xgboost as xgb
 import pickle
-from sklearn.metrics import roc_auc_score, roc_curve
+from sklearn.metrics import roc_auc_score, roc_curve, accuracy_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 import joblib
@@ -129,9 +129,10 @@ def build_model(embeding, classifying, x_train, y_train, x_test, y_test):
             with torch.no_grad():
                 model.eval()
                 y_pred = torch.softmax(outputs, dim=1)[:, 1]
-       
+    
+    acc = accuracy_score(y_test, np.round_(y_pred))  
     auc = roc_auc_score(y_test, y_pred)
-    print(f"{classifying}_{embeding} AUC: {auc}")    
+    print(f"{classifying}_{embeding} Accuracy: {acc}, AUC: {auc}")    
     fpr, tpr, thresholds = roc_curve(y_test, y_pred)
     roc_curve_plot(f'{classifying}_{embeding}', auc, fpr, tpr)
-    return auc
+    return acc, auc
