@@ -29,3 +29,7 @@ where
 ## Model loader
 
 - Load model and print metrics: `python/model_loader.ipynb`
+
+## Distributed Training
+
+- project `spark_classification` (with `scala`)
